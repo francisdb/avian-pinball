@@ -1,18 +1,20 @@
 mod camera;
 mod gizmos;
+mod diagnostics;
 
 use crate::camera::ControlCameraPlugin;
 use crate::gizmos::ControlGizmoPlugin;
 use avian3d::prelude::*;
 use bevy::color::palettes::css::DARK_GREY;
 use bevy::prelude::*;
+use crate::diagnostics::DiagnosticsPlugin;
 
 fn main() {
     App::new()
         .add_plugins((
             DefaultPlugins,
             PhysicsPlugins::default(),
-            PhysicsDebugPlugin::default(),
+            DiagnosticsPlugin,
             ControlGizmoPlugin,
             ControlCameraPlugin,
         ))
