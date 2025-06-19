@@ -322,7 +322,6 @@ version = "0.1.0"
 dependencies = [
  "avian3d",
  "bevy",
- "log",
 ]
 
 [[package]]
